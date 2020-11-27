@@ -40,21 +40,21 @@ const ganador=(array,index)=>{
 
 const verGanador=(array)=>{
     for (let i = 0; i < array.length; i+=3) {
-        if (array[i].innerHTML!=="." && array[i].innerHTML===array[i+1].innerHTML && array[i].innerHTML===array[i+2].innerHTML) {
+        if (array[i].innerHTML.trim()!=="." && array[i].innerHTML===array[i+1].innerHTML && array[i].innerHTML===array[i+2].innerHTML) {
             ganador(array,i);
         }
     }
     for (let i = 0; i < 3; i++) {
-        if (array[i].innerHTML!=="." && array[i].innerHTML===array[i+3].innerHTML && array[i].innerHTML===array[i+6].innerHTML) {
+        if (array[i].innerHTML.trim()!=="." && array[i].innerHTML===array[i+3].innerHTML && array[i].innerHTML===array[i+6].innerHTML) {
             ganador(array,i);
         }
     }
     i=0;
-    if (array[i].innerHTML!=="." && array[i].innerHTML===array[i+4].innerHTML && array[i].innerHTML===array[i+8].innerHTML) {
+    if (array[i].innerHTML.trim()!=="." && array[i].innerHTML===array[i+4].innerHTML && array[i].innerHTML===array[i+8].innerHTML) {
         ganador(array,i);
     }
     i=2;
-    if (array[i].innerHTML!=="." && array[i].innerHTML===array[i+2].innerHTML && array[i].innerHTML===array[i+4].innerHTML) {
+    if (array[i].innerHTML.trim()!=="." && array[i].innerHTML===array[i+2].innerHTML && array[i].innerHTML===array[i+4].innerHTML) {
         ganador(array,i);
     }
     winner!==""?actualizar(3000):null;
